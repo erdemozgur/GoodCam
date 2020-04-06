@@ -17,10 +17,11 @@ class AppContainerViewController: UIViewController, PhotoListCollectionViewContr
         guard let photoListCVC = self.children.first as? PhotoListCollectionViewController else {
             return
         }
-        //passing selected cell's image from photoListCollectionViewController
+        //getting selected cell's image from photoListCollectionViewController
         photoListCVC.delegate = self
     }
     
+    //protocol func
     func photoListDidSelectImage(selectedImage: UIImage) {
         
         showImagePreview(previewImage: selectedImage)
@@ -58,10 +59,21 @@ extension  AppContainerViewController {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let originalImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        showPhotoFiltersViewController(for: originalImage) // using the photo which was taken and passing it.
         
         
         picker.dismiss(animated: true, completion: nil)
          
+    }
+    //Passing Image to photoFiltersViewController
+    private func showPhotoFiltersViewController(for image: UIImage) {
+        guard let photoFiltersVC = self.storyboard?.instantiateViewController(withIdentifier: "PhotoFiltersViewController") as? PhotoFiltersViewController else {
+            fatalError("PhotoFiltersViewController is not found")
+        }
+        
+        photoFiltersVC.image = image
+        self.addChildController(photoFiltersVC)
+        
     }
     
     //Clicking cancel button to dismiss the view.

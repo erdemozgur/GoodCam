@@ -17,6 +17,7 @@
 		B422079E243B1E0E00701F7C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422079D243B1E0E00701F7C /* UIViewController+Extensions.swift */; };
 		B4CFC4C9243B258B00F15585 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC4C8243B258B00F15585 /* PhotoCollectionViewCell.swift */; };
 		B4CFC4CB243B371400F15585 /* PhotoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC4CA243B371400F15585 /* PhotoPreviewViewController.swift */; };
+		B4CFC4CE243B4B3E00F15585 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC4CD243B4B3E00F15585 /* FilterService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B422079D243B1E0E00701F7C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		B4CFC4C8243B258B00F15585 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		B4CFC4CA243B371400F15585 /* PhotoPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPreviewViewController.swift; sourceTree = "<group>"; };
+		B4CFC4CD243B4B3E00F15585 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		B4220780243B184C00701F7C /* GoodCam */ = {
 			isa = PBXGroup;
 			children = (
+				B4CFC4CC243B4B3100F15585 /* Services */,
 				B4CFC4C7243B257B00F15585 /* Cells */,
 				B422079C243B1DFC00701F7C /* Extensions */,
 				B4220795243B18D900701F7C /* Controllers */,
@@ -101,6 +104,14 @@
 				B4CFC4C8243B258B00F15585 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B4CFC4CC243B4B3100F15585 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B4CFC4CD243B4B3E00F15585 /* FilterService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4CFC4CB243B371400F15585 /* PhotoPreviewViewController.swift in Sources */,
+				B4CFC4CE243B4B3E00F15585 /* FilterService.swift in Sources */,
 				B422079B243B19E100701F7C /* PhotoFiltersViewController.swift in Sources */,
 				B4220797243B194B00701F7C /* AppContainerViewController.swift in Sources */,
 				B4220782243B184C00701F7C /* AppDelegate.swift in Sources */,
