@@ -18,6 +18,9 @@
 		B4CFC4C9243B258B00F15585 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC4C8243B258B00F15585 /* PhotoCollectionViewCell.swift */; };
 		B4CFC4CB243B371400F15585 /* PhotoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC4CA243B371400F15585 /* PhotoPreviewViewController.swift */; };
 		B4CFC4CE243B4B3E00F15585 /* FilterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC4CD243B4B3E00F15585 /* FilterService.swift */; };
+		B4CFC4D1243B4D2C00F15585 /* FiltersScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC4D0243B4D2C00F15585 /* FiltersScrollView.swift */; };
+		B4CFC4D3243B511E00F15585 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC4D2243B511E00F15585 /* UIImageView+Extensions.swift */; };
+		B4CFC4D6243B53BC00F15585 /* filter-default-image.png in Resources */ = {isa = PBXBuildFile; fileRef = B4CFC4D5243B53BC00F15585 /* filter-default-image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		B4CFC4C8243B258B00F15585 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		B4CFC4CA243B371400F15585 /* PhotoPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPreviewViewController.swift; sourceTree = "<group>"; };
 		B4CFC4CD243B4B3E00F15585 /* FilterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterService.swift; sourceTree = "<group>"; };
+		B4CFC4D0243B4D2C00F15585 /* FiltersScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersScrollView.swift; sourceTree = "<group>"; };
+		B4CFC4D2243B511E00F15585 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		B4CFC4D5243B53BC00F15585 /* filter-default-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "filter-default-image.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,8 @@
 		B4220780243B184C00701F7C /* GoodCam */ = {
 			isa = PBXGroup;
 			children = (
+				B4CFC4D4243B53AD00F15585 /* Images */,
+				B4CFC4CF243B4D1900F15585 /* Controls */,
 				B4CFC4CC243B4B3100F15585 /* Services */,
 				B4CFC4C7243B257B00F15585 /* Cells */,
 				B422079C243B1DFC00701F7C /* Extensions */,
@@ -94,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				B422079D243B1E0E00701F7C /* UIViewController+Extensions.swift */,
+				B4CFC4D2243B511E00F15585 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -112,6 +121,22 @@
 				B4CFC4CD243B4B3E00F15585 /* FilterService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B4CFC4CF243B4D1900F15585 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				B4CFC4D0243B4D2C00F15585 /* FiltersScrollView.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		B4CFC4D4243B53AD00F15585 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B4CFC4D5243B53BC00F15585 /* filter-default-image.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +200,7 @@
 				B422078E243B185000701F7C /* LaunchScreen.storyboard in Resources */,
 				B422078B243B185000701F7C /* Assets.xcassets in Resources */,
 				B4220789243B184C00701F7C /* Main.storyboard in Resources */,
+				B4CFC4D6243B53BC00F15585 /* filter-default-image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,11 +211,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CFC4D3243B511E00F15585 /* UIImageView+Extensions.swift in Sources */,
 				B4CFC4CB243B371400F15585 /* PhotoPreviewViewController.swift in Sources */,
 				B4CFC4CE243B4B3E00F15585 /* FilterService.swift in Sources */,
 				B422079B243B19E100701F7C /* PhotoFiltersViewController.swift in Sources */,
 				B4220797243B194B00701F7C /* AppContainerViewController.swift in Sources */,
 				B4220782243B184C00701F7C /* AppDelegate.swift in Sources */,
+				B4CFC4D1243B4D2C00F15585 /* FiltersScrollView.swift in Sources */,
 				B422079E243B1E0E00701F7C /* UIViewController+Extensions.swift in Sources */,
 				B4220799243B199600701F7C /* PhotoListCollectionViewController.swift in Sources */,
 				B4CFC4C9243B258B00F15585 /* PhotoCollectionViewCell.swift in Sources */,
