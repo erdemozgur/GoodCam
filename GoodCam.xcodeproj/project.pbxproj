@@ -16,6 +16,7 @@
 		B422079B243B19E100701F7C /* PhotoFiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422079A243B19E100701F7C /* PhotoFiltersViewController.swift */; };
 		B422079E243B1E0E00701F7C /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422079D243B1E0E00701F7C /* UIViewController+Extensions.swift */; };
 		B4CFC4C9243B258B00F15585 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC4C8243B258B00F15585 /* PhotoCollectionViewCell.swift */; };
+		B4CFC4CB243B371400F15585 /* PhotoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CFC4CA243B371400F15585 /* PhotoPreviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B422079A243B19E100701F7C /* PhotoFiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFiltersViewController.swift; sourceTree = "<group>"; };
 		B422079D243B1E0E00701F7C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		B4CFC4C8243B258B00F15585 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		B4CFC4CA243B371400F15585 /* PhotoPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPreviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				B4220796243B194B00701F7C /* AppContainerViewController.swift */,
 				B4220798243B199600701F7C /* PhotoListCollectionViewController.swift */,
 				B422079A243B19E100701F7C /* PhotoFiltersViewController.swift */,
+				B4CFC4CA243B371400F15585 /* PhotoPreviewViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CFC4CB243B371400F15585 /* PhotoPreviewViewController.swift in Sources */,
 				B422079B243B19E100701F7C /* PhotoFiltersViewController.swift in Sources */,
 				B4220797243B194B00701F7C /* AppContainerViewController.swift in Sources */,
 				B4220782243B184C00701F7C /* AppDelegate.swift in Sources */,

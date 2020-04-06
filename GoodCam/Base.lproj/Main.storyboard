@@ -111,6 +111,35 @@
             </objects>
             <point key="canvasLocation" x="1824.8" y="151.57421289355324"/>
         </scene>
+        <!--Photo Preview View Controller-->
+        <scene sceneID="wgT-h3-Jzh">
+            <objects>
+                <viewController storyboardIdentifier="PhotoPreviewViewController" id="JO3-d2-JzL" customClass="PhotoPreviewViewController" customModule="GoodCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m5v-6i-fxa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5CA-qG-WYD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5CA-qG-WYD" firstAttribute="leading" secondItem="eYz-Ls-iFG" secondAttribute="leading" id="82o-CV-7vq"/>
+                            <constraint firstItem="eYz-Ls-iFG" firstAttribute="trailing" secondItem="5CA-qG-WYD" secondAttribute="trailing" id="XNt-my-gYu"/>
+                            <constraint firstItem="5CA-qG-WYD" firstAttribute="top" secondItem="eYz-Ls-iFG" secondAttribute="top" id="YCe-xM-4Ie"/>
+                            <constraint firstItem="eYz-Ls-iFG" firstAttribute="bottom" secondItem="5CA-qG-WYD" secondAttribute="bottom" id="lFe-qT-xiC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eYz-Ls-iFG"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="5CA-qG-WYD" id="PhS-mh-2uM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSY-lj-CVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071.2" y="-538.38080959520244"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="5s5-wg-9JR">
             <objects>
