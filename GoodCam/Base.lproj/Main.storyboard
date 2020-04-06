@@ -54,43 +54,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akp-GL-wmU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <items>
                                     <barButtonItem title="Cancel" id="Cg4-ky-ilg"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Nmr-ff-ee0"/>
                                     <barButtonItem title="Done" id="2yO-0v-pPn"/>
                                 </items>
                             </toolbar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ly2-Jd-bD6">
-                                <rect key="frame" x="0.0" y="44" width="375" height="465"/>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhz-ka-KVm" customClass="FiltersScrollView" customModule="GoodCam" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="509" width="375" height="158"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhz-ka-KVm" customClass="FiltersScrollView" customModule="GoodCam" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="558" width="375" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.30196078430000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="UX9-hQ-vT7"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="o15-EG-c35"/>
                             </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ly2-Jd-bD6">
+                                <rect key="frame" x="0.0" y="88" width="375" height="431"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="431" id="BFt-ya-ugU"/>
+                                    <constraint firstAttribute="width" constant="375" id="z1w-HI-dLL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ly2-Jd-bD6" firstAttribute="width" secondItem="Zvw-lY-0kf" secondAttribute="width" id="57W-d8-7Be"/>
-                            <constraint firstItem="ly2-Jd-bD6" firstAttribute="top" secondItem="Akp-GL-wmU" secondAttribute="bottom" id="Dgy-GI-xrO"/>
-                            <constraint firstItem="Akp-GL-wmU" firstAttribute="top" secondItem="hZi-AT-0WI" secondAttribute="top" id="Hy5-q7-WZM"/>
-                            <constraint firstItem="rhz-ka-KVm" firstAttribute="bottom" secondItem="hZi-AT-0WI" secondAttribute="bottom" id="JN9-ym-2Kz"/>
-                            <constraint firstItem="rhz-ka-KVm" firstAttribute="height" secondItem="Zvw-lY-0kf" secondAttribute="height" multiplier="0.236882" id="T8a-mr-ziM"/>
-                            <constraint firstItem="Akp-GL-wmU" firstAttribute="trailing" secondItem="hZi-AT-0WI" secondAttribute="trailing" id="TAM-6m-TYZ"/>
-                            <constraint firstItem="Akp-GL-wmU" firstAttribute="leading" secondItem="hZi-AT-0WI" secondAttribute="leading" id="Yai-qT-wRu"/>
-                            <constraint firstItem="ly2-Jd-bD6" firstAttribute="height" secondItem="Zvw-lY-0kf" secondAttribute="height" multiplier="0.697151" id="mYP-AN-cbM"/>
-                            <constraint firstItem="rhz-ka-KVm" firstAttribute="width" secondItem="Zvw-lY-0kf" secondAttribute="width" id="pdZ-Ob-LG9"/>
-                            <constraint firstItem="ly2-Jd-bD6" firstAttribute="leading" secondItem="hZi-AT-0WI" secondAttribute="leading" id="x4h-CE-KpW"/>
-                            <constraint firstItem="rhz-ka-KVm" firstAttribute="leading" secondItem="hZi-AT-0WI" secondAttribute="leading" id="zA1-ic-dje"/>
+                            <constraint firstItem="Akp-GL-wmU" firstAttribute="top" secondItem="hZi-AT-0WI" secondAttribute="top" id="7lO-cZ-i8V"/>
+                            <constraint firstItem="ly2-Jd-bD6" firstAttribute="top" secondItem="Akp-GL-wmU" secondAttribute="bottom" id="8EX-hS-w5D"/>
+                            <constraint firstItem="ly2-Jd-bD6" firstAttribute="leading" secondItem="hZi-AT-0WI" secondAttribute="leading" id="G1Q-Wr-4oX"/>
+                            <constraint firstItem="Akp-GL-wmU" firstAttribute="leading" secondItem="hZi-AT-0WI" secondAttribute="leading" id="GbG-4A-wDP"/>
+                            <constraint firstItem="Akp-GL-wmU" firstAttribute="trailing" secondItem="hZi-AT-0WI" secondAttribute="trailing" id="SJy-Ck-GmO"/>
+                            <constraint firstItem="ly2-Jd-bD6" firstAttribute="top" secondItem="Akp-GL-wmU" secondAttribute="bottom" id="sSz-Qf-RVk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hZi-AT-0WI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uHc-ve-FYx"/>
+                    <connections>
+                        <outlet property="filtersScrollView" destination="rhz-ka-KVm" id="Jkx-5L-O0f"/>
+                        <outlet property="photoImageView" destination="ly2-Jd-bD6" id="8LY-6J-lMd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4S8-2L-zjO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824.8" y="-538.38080959520244"/>
+            <point key="canvasLocation" x="2764" y="-538.38080959520244"/>
         </scene>
         <!--Photo List Collection View Controller-->
         <scene sceneID="Y7S-kh-RsA">
@@ -189,6 +194,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1G3-A2-5Fg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pyo-ad-Z9i">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RmH-We-i0i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8ww-B2-d01">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Tbq-TG-GBb" kind="relationship" relationship="rootViewController" id="iwJ-z1-Rr7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ier-N8-xDu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824.8" y="-538.38080959520244"/>
         </scene>
     </scenes>
 </document>
