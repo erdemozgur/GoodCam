@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AppContainerViewController: UIViewController, PhotoListCollectionViewControllerDelegate {
+class AppContainerViewController: UIViewController, PhotoListCollectionViewControllerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class AppContainerViewController: UIViewController, PhotoListCollectionViewContr
         guard let photoListCVC = self.children.first as? PhotoListCollectionViewController else {
             return
         }
-        
+        //passing selected cell's image from photoListCollectionViewController
         photoListCVC.delegate = self
     }
     
@@ -28,7 +28,7 @@ class AppContainerViewController: UIViewController, PhotoListCollectionViewContr
     }
     
     private func showImagePreview(previewImage: UIImage) {
-        
+        //Showing image into PhotoPreviewViewController
         guard let photoPreviewVC = self.storyboard?.instantiateViewController(withIdentifier: "PhotoPreviewViewController") as? PhotoPreviewViewController else {
             fatalError("PhotoPreviewViewController is not found ")
         }
@@ -39,13 +39,35 @@ class AppContainerViewController: UIViewController, PhotoListCollectionViewContr
 
     @IBAction func cameraButtonPressed() {
         
-        guard let photoFilterVC = self.storyboard?.instantiateViewController(withIdentifier: "PhotoFiltersViewController") as? PhotoFiltersViewController else {
-            fatalError("PhotoFiltersViewController is not found")
+        //checking if the phone's camera available
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            
+            let imagePickerVC = UIImagePickerController()
+            imagePickerVC.sourceType = .camera
+            imagePickerVC.delegate = self
+            self.present(imagePickerVC, animated: true, completion: nil)
         }
-        self.addChildController(photoFilterVC)
         
     }
     
+}
+
+extension  AppContainerViewController {
     
+    //using image after taking the photo.
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let originalImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        
+        
+        picker.dismiss(animated: true, completion: nil)
+         
+    }
+    
+    //Clicking cancel button to dismiss the view.
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+
+    }
     
 }
