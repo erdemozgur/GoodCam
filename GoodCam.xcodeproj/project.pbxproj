@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B4220782243B184C00701F7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4220781243B184C00701F7C /* AppDelegate.swift */; };
-		B4220784243B184C00701F7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4220783243B184C00701F7C /* SceneDelegate.swift */; };
 		B4220789243B184C00701F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4220787243B184C00701F7C /* Main.storyboard */; };
 		B422078B243B185000701F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B422078A243B185000701F7C /* Assets.xcassets */; };
 		B422078E243B185000701F7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B422078C243B185000701F7C /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		B422077E243B184C00701F7C /* GoodCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4220781243B184C00701F7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B4220783243B184C00701F7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B4220788243B184C00701F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B422078A243B185000701F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B422078D243B185000701F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				B422079C243B1DFC00701F7C /* Extensions */,
 				B4220795243B18D900701F7C /* Controllers */,
 				B4220781243B184C00701F7C /* AppDelegate.swift */,
-				B4220783243B184C00701F7C /* SceneDelegate.swift */,
 				B4220787243B184C00701F7C /* Main.storyboard */,
 				B422078A243B185000701F7C /* Assets.xcassets */,
 				B422078C243B185000701F7C /* LaunchScreen.storyboard */,
@@ -166,7 +163,6 @@
 				B422079B243B19E100701F7C /* PhotoFiltersViewController.swift in Sources */,
 				B4220797243B194B00701F7C /* AppContainerViewController.swift in Sources */,
 				B4220782243B184C00701F7C /* AppDelegate.swift in Sources */,
-				B4220784243B184C00701F7C /* SceneDelegate.swift in Sources */,
 				B422079E243B1E0E00701F7C /* UIViewController+Extensions.swift in Sources */,
 				B4220799243B199600701F7C /* PhotoListCollectionViewController.swift in Sources */,
 			);
@@ -315,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6T542AJZ28;
 				INFOPLIST_FILE = GoodCam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6T542AJZ28;
 				INFOPLIST_FILE = GoodCam/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
