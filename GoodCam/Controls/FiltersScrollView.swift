@@ -32,6 +32,7 @@ class FiltersScrollView: UIScrollView {
     
     private func setupFilters() {
         
+        //applying filters to default image
         var offset: CGFloat = 10.0
         
         for (index, filter) in FiltersService.all().enumerated() {
@@ -45,6 +46,10 @@ class FiltersScrollView: UIScrollView {
             
             offset += filterImageView.frame.width + filterImageView.frame.width/4
             self.contentSize = CGSize(width: offset, height: self.frame.height)
+            
+            self.filtersService.applyFilter(filter: filter, to: filterImageView.image!) {
+                filterImageView.image = $0
+            }
             
         }
         

@@ -18,6 +18,20 @@ class FiltersService {
         self.context = CIContext()
     }
     
+    func applyFilter(filter: CIFilter, to inputImage: UIImage, completion: @escaping ((UIImage) -> ())) {
+        
+        let sourceImage = CIImage(image: inputImage)!
+        filter.setValue(sourceImage, forKey: kCIInputImageKey)
+        
+        if let cgimg = self.context.createCGImage(filter.outputImage!, from: filter.outputImage!.extent) {
+            
+            let processedImage = UIImage(cgImage: cgimg, scale: inputImage.scale, orientation: inputImage.imageOrientation)
+            completion(processedImage)
+            
+        }
+        
+    }
+    
     static func all() -> [CIFilter] {
         
         // blur
