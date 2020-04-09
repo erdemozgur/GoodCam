@@ -23,6 +23,9 @@ class PhotoListCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         populatePhotos()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.collectionView.reloadData()
+    }
     
     private func requestPermission(completion: @escaping(PHAuthorizationStatus) -> ()) {
         
@@ -71,7 +74,8 @@ extension PhotoListCollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as? PhotoCollectionViewCell else {
             fatalError("PhotoCollectionViewCell is not found")
         }
-        
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
         let asset = self.images[indexPath.row]
         let manager = PHImageManager.default()
         manager.requestImage(for: asset, targetSize: CGSize(width: 100.0, height: 100.0), contentMode: .aspectFit, options: nil) { (image, _ ) in

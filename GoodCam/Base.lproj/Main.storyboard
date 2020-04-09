@@ -56,9 +56,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akp-GL-wmU">
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="Cg4-ky-ilg"/>
+                                    <barButtonItem title="Cancel" id="Cg4-ky-ilg">
+                                        <connections>
+                                            <action selector="cancelButtonPressed" destination="Tbq-TG-GBb" id="w0P-rl-ctm"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Nmr-ff-ee0"/>
-                                    <barButtonItem title="Done" id="2yO-0v-pPn"/>
+                                    <barButtonItem title="Done" id="2yO-0v-pPn">
+                                        <connections>
+                                            <action selector="doneButtonPressed" destination="Tbq-TG-GBb" id="uSb-Jw-5Ur"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhz-ka-KVm" customClass="FiltersScrollView" customModule="GoodCam" customModuleProvider="target">
@@ -91,6 +99,7 @@
                     <connections>
                         <outlet property="filtersScrollView" destination="rhz-ka-KVm" id="Jkx-5L-O0f"/>
                         <outlet property="photoImageView" destination="ly2-Jd-bD6" id="8LY-6J-lMd"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goBackToMain" id="doI-Ov-tMz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4S8-2L-zjO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -100,11 +109,11 @@
         <!--Photo List Collection View Controller-->
         <scene sceneID="Y7S-kh-RsA">
             <objects>
-                <collectionViewController id="T5Z-cB-qvo" customClass="PhotoListCollectionViewController" customModule="GoodCam" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="PhotoListCollectionViewController" id="T5Z-cB-qvo" customClass="PhotoListCollectionViewController" customModule="GoodCam" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hmL-mJ-eFk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.91759417809999999" blue="0.70002140410000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1843137255" green="0.20784313730000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LVq-VM-lSQ">
                             <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -214,4 +223,7 @@
             <point key="canvasLocation" x="1824.8" y="-538.38080959520244"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="doI-Ov-tMz"/>
+    </inferredMetricsTieBreakers>
 </document>
